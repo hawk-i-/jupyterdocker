@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  baseubuntu:
+    image: baseubuntu
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080
+      - 4000
+      - 8443
