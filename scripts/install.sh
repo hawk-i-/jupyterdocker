@@ -9,6 +9,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | bash -
 apt-get install -y nodejs
 
 
-pip install jupyterhub
+pip install wheel
+pip install jupyterhub jupyterlab notebook
+pip install ipywidgets
 npm install -g configurable-http-proxy
-pip install notebook

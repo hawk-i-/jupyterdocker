@@ -14,6 +14,8 @@ RUN /tmp/jupyterhub/install.sh
 ENV default_username jupyteruser
 ENV default_password juppass
 
-EXPOSE 8080 4000
+COPY ./scripts/jupyterhub_config.py /app/jupyterhub/jupyterhub_config.py
 
-CMD ["sh", "/tmp/jupyterhub/initialize.sh"]
+EXPOSE 8000 8080 8081 4000
+
+# CMD ["sh", "/tmp/jupyterhub/initialize.sh"]
