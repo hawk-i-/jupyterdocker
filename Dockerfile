@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:18.04
 LABEL Name=jupyterhub Version=0.0.1
 
 RUN apt-get -y update
@@ -18,4 +18,4 @@ COPY ./scripts/jupyterhub_config.py /app/jupyterhub/jupyterhub_config.py
 
 EXPOSE 8000 8080 8081 4000
 
-# CMD ["sh", "/tmp/jupyterhub/initialize.sh"]
+CMD ["sh", "/tmp/jupyterhub/initialize.sh"]
